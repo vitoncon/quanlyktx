@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="thongbao.css">
+</head>
+<body>
+    <div class="notification-page">
+    <h1>Quản lý thông báo</h1>
+
+    <!-- THANH CÔNG CỤ -->
+    <div class="toolbar">
+      <div class="filter-group">
+        <label>Loại thông báo:</label>
+        <select>
+          <option>Tất cả</option>
+          <option>Thông báo chung</option>
+          <option>Phòng ở</option>
+          <option>Tài chính</option>
+          <option>Nội quy</option>
+          <option>Hợp đồng</option>
+        </select>
+      </div>
+
+      <div class="search-section">
+        <input type="text" placeholder="Tìm kiếm thông báo..." class="search-input">
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <button class="add-btn"><i class="fa-solid fa-plus"></i> Tạo thông báo mới</button>
+    </div>
+
+    <!-- BẢNG THÔNG BÁO -->
+    <div class="table-container">
+      <table class="notification-table">
+        <thead>
+          <tr>
+            <th>Mã TB</th>
+            <th>Tiêu đề</th>
+            <th>Loại thông báo</th>
+            <th>Ngày tạo</th>
+            <th>Người tạo</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TB20251001</td>
+            <td>Cập nhật quy định phòng ở</td>
+            <td>Nội quy</td>
+            <td>2025-10-01</td>
+            <td>Quản lý KTX</td>
+            <td>
+              <button class="action-btn view"><i class="fa-solid fa-eye"></i> Xem</button>
+              <button class="action-btn delete"><i class="fa-solid fa-trash"></i> Xóa</button>
+            </td>
+          </tr>
+          <tr>
+            <td>TB20250915</td>
+            <td>Thông báo đóng tiền nội trú tháng 9</td>
+            <td>Tài chính</td>
+            <td>2025-09-15</td>
+            <td>Phòng Kế toán</td>
+            <td>
+              <button class="action-btn view"><i class="fa-solid fa-eye"></i> Xem</button>
+              <button class="action-btn delete"><i class="fa-solid fa-trash"></i> Xóa</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

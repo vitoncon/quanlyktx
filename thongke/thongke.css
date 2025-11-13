@@ -1,0 +1,260 @@
+/* Reset cơ bản */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+/* --- KHUNG CHÍNH --- */
+.report-page {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.report-page h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #1e88e5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- THANH TAB --- */
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom:10px;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  background-color: #0d47a1;
+  color: white;
+}
+
+.tab-btn.active {
+  background-color: #1565c0;
+  color: white;
+  font-weight: 600;
+}
+
+/* --- THANH LỌC & TÌM KIẾM --- */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+}
+
+.filter-select {
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+.filter-select:focus {
+  border-color: #1565c0;
+  outline: none;
+}
+
+/* --- NÚT HÀNH ĐỘNG --- */
+.status-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.status-btn {
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  background-color: #fff;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-btn:hover:not(.active) {
+  background-color: #0d47a1;
+  color: white;
+}
+
+.status-btn.active {
+  background-color: #1565c0;
+  color: white;
+}
+
+/* --- TÌM KIẾM --- */
+.search-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.search-input {
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+  flex: 1;
+  min-width: 220px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.search-filter {
+  border: none;
+  border-left: 1px solid #cbd5e1;
+  padding: 6px 10px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  color: #374151;
+}
+
+.search-input:focus,
+.search-filter:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* --- BẢNG THỐNG KÊ --- */
+.table-container {
+  overflow-x: auto;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.report-table th,
+.report-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.report-table th {
+  background-color: #1565c0;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.report-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.action-btn {
+  background-color: #1565c0;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #0d47a1;
+}
+
+/* --- KHU BIỂU ĐỒ --- */
+.chart-section {
+  margin-top: 30px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.chart-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1565c0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.chart-placeholder {
+  background: #f0f4ff;
+  border: 1px dashed #1565c0;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  color: #555;
+  font-style: italic;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-section {
+    justify-content: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}

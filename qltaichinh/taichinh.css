@@ -1,0 +1,344 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+/* TRANG QUẢN LÝ TÀI CHÍNH */
+.finance-page {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* --- TIÊU ĐỀ TRANG --- */
+.finance-page h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #1e88e5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- TAB MENU --- */
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom:10px;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  background-color: #0d47a1;
+  color: white;
+}
+
+.tab-btn.active {
+  background-color: #1565c0;
+  color: white;
+  font-weight: 600;
+}
+
+/* --- BỘ LỌC & THANH CÔNG CỤ --- */
+.controls, .filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+}
+
+.filter-select {
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+/* NÚT TRẠNG THÁI */
+.status-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.status-btn {
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  background-color: #fff;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-btn:hover:not(.active) {
+  background-color: #0d47a1;
+  color: white;
+}
+
+.status-btn.active {
+  background-color: #1565c0;
+  color: white;
+}
+
+/* NÚT HÀNH ĐỘNG */
+.action-btn {
+  background-color: #1565c0;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #0d47a1;
+}
+
+/* THANH TÌM KIẾM PHẢI */
+.search-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.search-box input {
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+  flex: 1;
+  min-width: 220px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.search-filter {
+  border: none;
+  border-left: 1px solid #cbd5e1;
+  padding: 6px 10px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  color: #374151;
+}
+
+.search-box button {
+  background: #1565c0;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.search-box button:hover {
+  background: #0d47a1;
+}
+
+/* --- BẢNG DỮ LIỆU --- */
+.table-container {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.finance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.finance-table th {
+  background: #1565c0;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.finance-table td {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+  text-align: center;
+}
+
+.finance-table tr:last-child td {
+  border-bottom: none;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  background: #1565c0;
+  color: white;
+  justify-self: center;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.action-btn.view {
+  background: #0d47a1;
+  color: white;
+  border-color: white;
+}
+
+.action-btn:hover {
+  filter: brightness(0.95);
+  background: #0d47a1;
+}
+
+/* TRẠNG THÁI THANH TOÁN */
+.table-actions {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.action-btn.small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.action-btn.view {
+  background: #1565c0;
+  color: white;
+}
+
+.action-btn.confirm {
+  background: #059669;
+  color: white;
+}
+
+/* --- TIÊU ĐỀ PHẦN --- */
+.section h3 {
+  background: #1565c0;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px 6px 0 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- BẢNG KHOẢN THU --- */
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5e7eb;
+}
+
+.fee-table th {
+  background: #1565c0;
+  border: 1px solid #ddd;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.fee-table td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  border: 1px solid #f1f5f9;
+  text-align: left;
+  vertical-align: middle;
+  color: #374151;
+}
+
+.fee-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.fee-table td:nth-child(3) {
+  text-align: center; /* canh giữa cột giá trị */
+  font-weight: bold;
+  color: #2a7b2a;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-section {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .search-input {
+    width: 100%;
+  }
+  .finance-table th, .finance-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
